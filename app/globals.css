@@ -33,6 +33,10 @@
       --ring: 0 0% 3.9%;
 
       --radius: 0.5rem;
+
+    /*  Custom colors*/
+      --blue: 243, 75%, 59%;
+      --light-red: 0, 79%, 95%;
     }
 
     .dark {
@@ -71,6 +75,10 @@
       @apply border-border;
     }
     body {
-      @apply bg-background text-foreground;
+      @apply bg-background text-foreground h-full;
     }
   }
+
+html {
+  height: 100vh;
+}
