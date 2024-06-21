@@ -1,8 +1,8 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react";
 
 interface IProps {
-  children: ReactNode
+  children: ReactNode;
 }
 export default function FieldError({ children }: IProps) {
-  return <p className="text-red">{children}</p>
+  return <p className="text-destructive text-sm">{children}</p>;
 }

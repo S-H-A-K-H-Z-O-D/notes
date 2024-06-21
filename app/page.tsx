@@ -1,5 +1,4 @@
-import { Navbar } from "@/app/components";
-import Titles from "@/app/components/landing/titles/NoteTitles";
+import { Navbar, Titles } from "@/app/components";
 
 export default function Home() {
   return (

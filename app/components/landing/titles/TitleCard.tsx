@@ -1,6 +1,7 @@
 import { EditIcon, TrashIcon } from "@/app/components/common/Icons";
-import img from "@/public/for_titles.jpg";
 import Image from "next/image";
+import DeleteModal from "@/app/components/common/DeleteModal";
+import CrudTitleModal from "@/app/components/common/CrudTitleModal";
 
 const TitleCard = ({ title }: { title: string }) => {
   return (
@@ -18,12 +19,16 @@ const TitleCard = ({ title }: { title: string }) => {
       </div>
 
       <div className="flex justify-between">
-        <button className="border border-border rounded-md p-2 w-[40px] h-[40px] flex items-center justify-center hover:bg-secondary">
-          <EditIcon />
-        </button>
-        <button className="border border-destructive rounded-md p-2 w-[40px] h-[40px] flex items-center justify-center hover:bg-lightRed">
-          <TrashIcon />
-        </button>
+        <CrudTitleModal title={title}>
+          <span className="border border-border rounded-md p-2 w-[40px] h-[40px] flex items-center justify-center hover:bg-secondary">
+            <EditIcon />
+          </span>
+        </CrudTitleModal>
+        <DeleteModal>
+          <span className="border border-destructive rounded-md p-2 w-[40px] h-[40px] flex items-center justify-center hover:bg-lightRed">
+            <TrashIcon />
+          </span>
+        </DeleteModal>
       </div>
     </div>
   );

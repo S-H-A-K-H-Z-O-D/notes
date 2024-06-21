@@ -3,12 +3,12 @@ import {
   Path,
   RegisterOptions,
   UseFormReturn,
-} from 'react-hook-form';
-import FieldLabel from './FieldLabel';
-import FieldError from './FieldError';
-import { ReactNode, useState } from 'react';
-import { EyeHideIcon, EyeIcon } from '@/app/components/common/Icons';
-import { cn } from '@/lib/utils';
+} from "react-hook-form";
+import FieldLabel from "./FieldLabel";
+import FieldError from "./FieldError";
+import { ReactNode, useState } from "react";
+import { EyeHideIcon, EyeIcon } from "@/app/components/common/Icons";
+import { cn } from "@/lib/utils";
 
 interface IProps<IForm extends FieldValues> {
   methods: UseFormReturn<IForm>;
@@ -44,14 +44,14 @@ export default function InputField<IForm extends FieldValues>({
   });
 
   return (
-    <fieldset className={cn('flex flex-col gap-[0.8rem]', className)}>
+    <fieldset className={cn("flex flex-col gap-1", className)}>
       {label && <FieldLabel required={required}>{label}</FieldLabel>}
       <label className="relative flex items-center">
         <input
-          type={password ? (pwd ? 'password' : 'text') : 'text'}
+          type={password ? (pwd ? "password" : "text") : "text"}
           className={cn(
-            'w-full border-borderGrey border rounded-[1.2rem] bg-white outline-none leading-none px-[2.4rem] text-darkBlue caret-darkBlue font-medium text-[clamp(1.4rem,_1.4vw,_1.6rem)]',
-            password ? 'font-[Verdana] pr-[6.8rem]' : '',
+            "w-full border-borderGrey border rounded-md bg-white outline-none leading-none px-4 font-medium h-10",
+            password ? "font-[Verdana] pr-[6.8rem]" : "",
           )}
           autoComplete="off"
           {...reg}
