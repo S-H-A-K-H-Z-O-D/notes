@@ -5,7 +5,7 @@ import CrudTitleModal from "@/app/components/common/CrudTitleModal";
 
 const TitleCard = ({ title }: { title: string }) => {
   return (
-    <div className="shadow-[0_0_10px_0px_rgb(0,0,0,0.1)] rounded-xl p-5">
+    <div className="shadow-[0_0_10px_0px_rgb(0,0,0,0.1)] rounded-xl p-5 min-w-[250px]">
       <h3 className="font-medium text-xl text-center">{title}</h3>
 
       <div className="flex justify-center mt-4 mb-7">

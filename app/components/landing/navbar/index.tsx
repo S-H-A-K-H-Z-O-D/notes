@@ -2,10 +2,9 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { Languages } from "lucide-react";
 import { SearchIcon } from "@/app/components/common/Icons";
 
-const Navbar = () => {
+const Navbar = ({ layout = false }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [navbarOpen, setNavbarOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -29,7 +28,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav
+      className={`bg-white border-gray-200 dark:bg-gray-900 
+      ${layout && "border-b py-3 px-6"}`}
+    >
       <div className="flex flex-wrap items-center justify-between">
         <a
           href="https://flowbite.com/"

@@ -8,7 +8,7 @@ export default function NotesLayout({
   return (
     <section>
       <div>
-        <Navbar />
+        <Navbar layout={true} />
         <div className="flex">
           <Titles layout={true} />
           {children}
