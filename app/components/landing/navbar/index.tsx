@@ -29,8 +29,8 @@ const Navbar = ({ layout = false }) => {
 
   return (
     <nav
-      className={`bg-white border-gray-200 dark:bg-gray-900 
-      ${layout && "border-b py-3 px-6"}`}
+      className={`bg-white border-gray-200 dark:bg-gray-900 py-3 px-[clamp(1rem,_4vw,_2rem)]
+      ${layout ? "border-b" : "max-md:border-b"}`}
     >
       <div className="flex flex-wrap items-center justify-between">
         <a

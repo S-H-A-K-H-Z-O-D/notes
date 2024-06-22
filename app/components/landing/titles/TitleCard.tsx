@@ -1,7 +1,7 @@
 import { EditIcon, TrashIcon } from "@/app/components/common/Icons";
 import Image from "next/image";
 import DeleteModal from "@/app/components/common/DeleteModal";
-import CrudTitleModal from "@/app/components/common/CrudTitleModal";
+import CrudTitleModal from "@/app/components/landing/titles/CrudTitleModal";
 
 const TitleCard = ({ title }: { title: string }) => {
   return (
@@ -20,7 +20,7 @@ const TitleCard = ({ title }: { title: string }) => {
 
       <div className="flex justify-between">
         <CrudTitleModal title={title}>
-          <span className="border border-border rounded-md p-2 w-[40px] h-[40px] flex items-center justify-center hover:bg-secondary">
+          <span className="z-30 [&_svg_path]:stroke-blue border border-blue rounded-md p-2 w-[40px] h-[40px] flex items-center justify-center hover:bg-lightBlue">
             <EditIcon />
           </span>
         </CrudTitleModal>

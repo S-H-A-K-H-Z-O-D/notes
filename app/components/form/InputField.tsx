@@ -50,7 +50,7 @@ export default function InputField<IForm extends FieldValues>({
         <input
           type={password ? (pwd ? "password" : "text") : "text"}
           className={cn(
-            "w-full border-borderGrey border rounded-md bg-white outline-none leading-none px-4 font-medium h-10",
+            "w-full border-borderGrey border rounded-md bg-white outline-none leading-none px-4 h-10",
             password ? "font-[Verdana] pr-[6.8rem]" : "",
           )}
           autoComplete="off"

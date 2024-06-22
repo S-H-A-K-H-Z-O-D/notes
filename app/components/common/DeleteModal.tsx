@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/app/components/ui/dialog";
 import { Button } from "@/app/components/ui/button";
 import Image from "next/image";
 
@@ -16,7 +16,7 @@ const DeleteModal = ({ children }: any) => {
     <div>
       <Dialog>
         <DialogTrigger>{children}</DialogTrigger>
-        <DialogContent className="px-10 py-12 max-w-[500px] [&_svg]:hidden">
+        <DialogContent className="px-10 py-12 max-w-[500px] [&_svg]:hidden scale-90">
           <div className="flex justify-center">
             <Image
               src="/delete-warning.svg"

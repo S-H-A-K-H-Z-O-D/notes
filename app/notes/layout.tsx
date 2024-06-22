@@ -10,7 +10,9 @@ export default function NotesLayout({
       <div>
         <Navbar layout={true} />
         <div className="flex">
-          <Titles layout={true} />
+          <div className="max-md:hidden">
+            <Titles layout={true} />
+          </div>
           {children}
         </div>
       </div>

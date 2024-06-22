@@ -5,9 +5,8 @@ import {
   DialogClose,
   DialogContent,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/app/components/ui/dialog";
 import { Button } from "@/app/components/ui/button";
-import { PlusIcon } from "lucide-react";
 import InputField from "@/app/components/form/InputField";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
@@ -36,13 +35,16 @@ const CrudTitleModal = ({ children, title = "" }: any) => {
           {children}
         </DialogTrigger>
         <DialogContent>
-          <form onSubmit={handleSubmit(onSubmit)} className="m-7">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="max-sm:mt-4 max-sm:mb-0 sm:m-7"
+          >
             <InputField
               methods={methods}
               name="title"
               label="Mavzu"
               required
-              placeholder="Mavzuni kiriting"
+              placeholder="Mavzuni kiriting..."
             />
 
             <div className="flex justify-end mt-4">

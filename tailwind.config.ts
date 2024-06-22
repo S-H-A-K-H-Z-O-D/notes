@@ -21,6 +21,7 @@ const config = {
       colors: {
         // custom colors
         blue: "hsl(var(--blue))",
+        lightBlue: "hsl(var(--light-blue))",
         lightRed: "hsl(var(--light-red))",
 
         border: "hsl(var(--border))",
