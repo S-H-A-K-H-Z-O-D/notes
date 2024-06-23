@@ -25,6 +25,7 @@ const NoteCard = () => {
           Doʻstlik — ijtimoiy-axloqiy va psixologik tushuncha. Oʻzaro hurmat,
           yoqtirish, manfaatlarning umumiyligi, yaqinlik, bir-birini tushunishga
           asoslangan kishilar oʻrtasidagi munosabat shaklini ifodalaydi.
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           Kishilarning muloqot shakli sifatidagi Do'stlik qonqardoshlik,
           oʻrtoqlik, birodarlik tushunchalariga yaqin, lekin psixologik nuqtai
           nazardan esa ulardan oʻzining alohidaligi, tanlash xususiyati,

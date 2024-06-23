@@ -1,18 +1,18 @@
-import { Control, FieldValues, Path, useController } from "react-hook-form"
-import FieldLabel from "./FieldLabel"
-import Select, { ClassNamesConfig, Props } from "react-select"
-import makeAnimated from "react-select/animated"
-import FieldError from "./FieldError"
-import { cn } from "@/lib/utils"
+import { Control, FieldValues, Path, useController } from "react-hook-form";
+import FieldLabel from "./FieldLabel";
+import Select, { ClassNamesConfig, Props } from "react-select";
+import makeAnimated from "react-select/animated";
+import FieldError from "./FieldError";
+import { cn } from "@/lib/utils";
 
 interface IProps<IForm extends FieldValues> {
-  control: Control<IForm>
-  name: Path<IForm>
-  label?: string
-  required?: boolean
+  control: Control<IForm>;
+  name: Path<IForm>;
+  label?: string;
+  required?: boolean;
 }
 
-const animatedComponents = makeAnimated()
+const animatedComponents = makeAnimated();
 
 export default function SelectField<IForm extends FieldValues>({
   name,
@@ -30,24 +30,24 @@ export default function SelectField<IForm extends FieldValues>({
     control,
     rules: {
       validate: (val) => {
-        let err = ""
-        let valid = true
+        let err = "";
+        let valid = true;
         if (required) {
           if (props.isMulti && val && val.length == 0) {
-            err = "Ushbu maydon to'ldirilishi shart"
-            valid = false
+            err = "Ushbu maydon to'ldirilishi shart";
+            valid = false;
           }
 
           if (!val) {
-            err = "Ushbu maydon to'ldirilishi shart"
-            valid = false
+            err = "Ushbu maydon to'ldirilishi shart";
+            valid = false;
           }
         }
 
-        return valid || err
+        return valid || err;
       },
     },
-  })
+  });
 
   return (
     <fieldset className={cn("flex flex-col gap-[0.8rem]", className)}>
@@ -65,9 +65,10 @@ export default function SelectField<IForm extends FieldValues>({
       />
       {fieldState.error && <FieldError>{fieldState.error?.message}</FieldError>}
     </fieldset>
-  )
+  );
 }
 
+// @ts-ignore
 const classNames: ClassNamesConfig = {
   control: ({ isFocused }) =>
     cn(
@@ -77,5 +78,9 @@ const classNames: ClassNamesConfig = {
   indicatorSeparator: () => "!hidden",
   menu: () => "",
   menuList: () => "!p-0",
-  option: ({ isSelected }) => cn("hover:!text-white !bg-white hover:!bg-slate-500", isSelected && "!bg-slate-500"),
-}
+  option: ({ isSelected }) =>
+    cn(
+      "hover:!text-white !bg-white hover:!bg-slate-500",
+      isSelected && "!bg-slate-500",
+    ),
+};

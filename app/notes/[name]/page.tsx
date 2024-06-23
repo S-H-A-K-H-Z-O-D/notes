@@ -23,6 +23,7 @@ const Notes = ({ params }: { params: { name: string } }) => {
         <span
           className={`flex justify-end items-center hover:shadow-lg border border-primary px-4 py-1.5 rounded-md hover:text-primary-foreground hover:bg-primary`}
         >
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <PlusIcon className="mr-1" /> Estalma qo'shish
         </span>
       </CrudNoteModal>

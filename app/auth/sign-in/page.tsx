@@ -97,6 +97,7 @@ const Login = () => {
             </div>
 
             <div>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <span className="text-sm">Ro'yhatdan o'tish - </span>
               <Link href="/auth/sign-up" className="text-sm text-blue">
                 bu yerda

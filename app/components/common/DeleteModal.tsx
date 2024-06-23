@@ -28,6 +28,7 @@ const DeleteModal = ({ children }: any) => {
 
           <DialogHeader className="-mt-10">
             <DialogTitle className="text-2xl text-center">
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               Haqiqatdan ham o'chirishga ishonchingiz komilmi?
             </DialogTitle>
           </DialogHeader>
@@ -36,6 +37,7 @@ const DeleteModal = ({ children }: any) => {
             <DialogClose className="w-full">
               <div className="flex justify-end mt-4">
                 <Button variant="outline" className="w-full text-lg">
+                  {/* eslint-disable-next-line react/no-unescaped-entities */}
                   Yo'q
                 </Button>
               </div>

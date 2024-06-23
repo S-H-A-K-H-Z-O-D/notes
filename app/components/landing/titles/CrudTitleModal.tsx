@@ -31,9 +31,9 @@ const CrudTitleModal = ({ children, title = "" }: any) => {
   return (
     <div>
       <Dialog>
-        <DialogTrigger className="w-full flex justify-end">
-          {children}
-        </DialogTrigger>
+        <div className="w-full flex justify-end">
+          <DialogTrigger>{children}</DialogTrigger>
+        </div>
         <DialogContent>
           <form
             onSubmit={handleSubmit(onSubmit)}

@@ -1,17 +1,17 @@
-import { Control, FieldValues, Path, useController } from "react-hook-form"
-import FieldLabel from "./FieldLabel"
-import FieldError from "./FieldError"
-import DatePicker, { ReactDatePickerProps } from "react-datepicker"
-import "react-datepicker/dist/react-datepicker.css"
-import { CalendarIcon } from "@radix-ui/react-icons"
-import { cn } from "@/lib/utils"
+import { Control, FieldValues, Path, useController } from "react-hook-form";
+import FieldLabel from "./FieldLabel";
+import FieldError from "./FieldError";
+import DatePicker, { ReactDatePickerProps } from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { CalendarIcon } from "@radix-ui/react-icons";
+import { cn } from "@/lib/utils";
 
 interface IProps<IForm extends FieldValues> {
-  control: Control<IForm>
-  name: Path<IForm>
-  label?: string
-  required?: boolean
-  placeholder?: string
+  control: Control<IForm>;
+  name: Path<IForm>;
+  label?: string;
+  required?: boolean;
+  placeholder?: string;
 }
 
 export default function DatePickerField<IForm extends FieldValues>({
@@ -34,7 +34,7 @@ export default function DatePickerField<IForm extends FieldValues>({
         message: "Ushbu maydon to'ldirilishi shart",
       },
     },
-  })
+  });
 
   return (
     <fieldset className={cn("flex flex-col gap-[0.8rem]", className)}>
@@ -56,5 +56,5 @@ export default function DatePickerField<IForm extends FieldValues>({
       </label>
       {fieldState.error && <FieldError>{fieldState.error?.message}</FieldError>}
     </fieldset>
-  )
+  );
 }

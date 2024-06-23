@@ -35,6 +35,7 @@ export default function InputField<IForm extends FieldValues>({
     register,
     formState: { errors },
   } = methods;
+  // @ts-ignore
   const reg = register(name, {
     required: {
       value: required,
