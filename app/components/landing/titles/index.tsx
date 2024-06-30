@@ -3,6 +3,8 @@ import TitleCard from "@/app/components/landing/titles/TitleCard";
 import Link from "next/link";
 import { ChevronRightIcon, PlusIcon } from "lucide-react";
 import CrudTitleModal from "@/app/components/landing/titles/CrudTitleModal";
+import { SearchIcon } from "@/app/components/common/Icons";
+import React from "react";
 
 const Titles = ({ layout = false }) => {
   return (
@@ -13,20 +15,35 @@ const Titles = ({ layout = false }) => {
         <h1 className="font-semibold text-3xl text-center">Qayd mavzulari</h1>
         {layout && (
           <Link href="/">
-            <div className="bg-secondary absolute rounded-r-full py-4 px-1 left-full z-100">
+            <div className="bg-secondary absolute rounded-r-full py-4 px-1 left-full z-100 top-4">
               <ChevronRightIcon />
             </div>
           </Link>
         )}
 
-        <CrudTitleModal>
-          <span
-            className={`flex ${layout ? "justify-center w-full" : "justify-end"} items-center my-5 hover:shadow-lg border border-primary px-4 py-1.5 rounded-md hover:text-primary-foreground hover:bg-primary`}
-          >
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <PlusIcon className="mr-1" /> Mavzu qo'shish
-          </span>
-        </CrudTitleModal>
+        <div className={`flex items-center justify-between gap-2`}>
+          <div className={`relative ${layout ? "w-full" : "w-[300px]"}`}>
+            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none [&_svg_path]:stroke-muted-foreground">
+              <SearchIcon />
+              <span className="sr-only">Search icon</span>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 outline-none"
+              placeholder="Search..."
+            />
+          </div>
+
+          <CrudTitleModal>
+            <span
+              className={`flex gap-1 ${layout ? "justify-center w-full px-2" : "justify-end px-4 max-sm:px-2"} items-center my-5 hover:shadow-lg border border-primary py-1.5 rounded-md hover:text-primary-foreground hover:bg-primary`}
+            >
+              <PlusIcon />{" "}
+              {!layout && <p className="max-sm:hidden">{"Mavzu qo'shish"}</p>}
+            </span>
+          </CrudTitleModal>
+        </div>
       </div>
 
       <div

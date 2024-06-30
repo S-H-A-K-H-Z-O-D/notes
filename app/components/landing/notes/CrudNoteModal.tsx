@@ -25,14 +25,16 @@ const CrudNoteModal = ({ children, note = "" }: any) => {
 
   useEffect(() => {
     note && setValue("note", note);
-  }, []);
+  }, [note, setValue]);
   const isValid = formState.isValid;
 
   return (
     <div>
       <Dialog>
         <div className="w-full flex justify-end">
-          <DialogTrigger>{children}</DialogTrigger>
+          <DialogTrigger className="max-[450px]:w-full">
+            {children}
+          </DialogTrigger>
         </div>
         <DialogContent>
           <form

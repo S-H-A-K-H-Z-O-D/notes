@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 const Avatar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -33,24 +32,24 @@ const Avatar = () => {
 
         <button
           type="button"
-          className="flex text-sm rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+          className="flex text-sm md:me-0"
           id="user-menu-button"
           aria-expanded={dropdownOpen}
           onClick={handleDropdownToggle}
         >
-          {/*<Image*/}
-          {/*  className="w-8 h-8 rounded-full"*/}
-          {/*  src="/docs/images/people/profile-picture-3.jpg"*/}
-          {/*  alt="user photo"*/}
-          {/*/>*/}
-          <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex justify-center items-center text-lg font-medium">
-            AF
+          <div className="flex items-center">
+            <div className="z-30 w-10 h-10 sm:-mr-5 rounded-full bg-primary text-primary-foreground flex justify-center items-center text-lg font-medium">
+              AF
+            </div>
+            <div className="h-10 flex border-2 border-primary items-center pl-7 border-l-0 rounded-sm text-lg font-medium pr-3 max-sm:hidden">
+              AMOR FATI
+            </div>
           </div>
         </button>
 
         <div
           ref={dropdownRef}
-          className={`z-50 ${dropdownOpen ? "absolute top-7 right-0" : "hidden"} my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600`}
+          className={`z-50 ${dropdownOpen ? "absolute top-7 right-0" : "hidden"} my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-700 dark:divide-gray-600`}
           id="user-dropdown"
         >
           <div className="px-4 py-3">

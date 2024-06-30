@@ -25,14 +25,14 @@ const CrudTitleModal = ({ children, title = "" }: any) => {
 
   useEffect(() => {
     title && setValue("title", title);
-  }, []);
+  }, [setValue, title]);
   const isValid = formState.isValid;
 
   return (
     <div>
       <Dialog>
         <div className="w-full flex justify-end">
-          <DialogTrigger>{children}</DialogTrigger>
+          <DialogTrigger className="w-full">{children}</DialogTrigger>
         </div>
         <DialogContent>
           <form
