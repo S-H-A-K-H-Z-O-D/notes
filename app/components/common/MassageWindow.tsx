@@ -46,7 +46,7 @@ const MassageWindow = () => {
               methods={methods}
               name="note"
               required
-              placeholder="Eslatmani kiriting..."
+              placeholder="Matnni kiriting..."
             />
 
             <div className="flex justify-between items-end mt-4">
