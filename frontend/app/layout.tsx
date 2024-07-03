@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="relative">
+        <div className="h-full">
           {children}
           <MassageWindow />
         </div>

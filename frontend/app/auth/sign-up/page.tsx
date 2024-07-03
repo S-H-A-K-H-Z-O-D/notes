@@ -11,9 +11,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/app/components/ui/form";
-import { Button } from "@/app/components/ui/button";
-import { Input } from "@/app/components/ui/input";
+} from "../../components/ui/form";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
 
 const formSchema = z
   .object({

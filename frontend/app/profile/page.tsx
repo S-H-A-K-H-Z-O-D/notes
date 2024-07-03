@@ -3,9 +3,9 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/app/components/ui/tabs";
-import InfoChange from "@/app/components/landing/profile/InfoChange";
-import PasswordChange from "@/app/components/landing/profile/PasswordChange";
+} from "../components/ui/tabs";
+import InfoChange from "../components/landing/profile/InfoChange";
+import PasswordChange from "../components/landing/profile/PasswordChange";
 import { LockIcon, UserIcon } from "lucide-react";
 
 const Profile = () => {

@@ -1,4 +1,4 @@
-import { Navbar, Titles } from "@/app/components";
+import { Navbar, Titles } from "./components";
 import React from "react";
 
 export default function Home() {

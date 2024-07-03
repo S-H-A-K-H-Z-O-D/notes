@@ -1,7 +1,7 @@
-import NoteCard from "@/app/components/landing/notes/NoteCard";
+import NoteCard from "../../components/landing/notes/NoteCard";
 import Link from "next/link";
 import { ChevronLeftIcon, PlusIcon } from "lucide-react";
-import CrudNoteModal from "@/app/components/landing/notes/CrudNoteModal";
+import CrudNoteModal from "../../components/landing/notes/CrudNoteModal";
 
 const Notes = ({ params }: { params: { name: string } }) => {
   const arr = [1, 5, 6, 8, 5, 32, 5];
@@ -9,7 +9,7 @@ const Notes = ({ params }: { params: { name: string } }) => {
     <div className="p-8 pl-12 w-full max-md:px-5 h-[calc(100vh-65px)] overflow-auto">
       <div className="flex items-center gap-4">
         <Link
-          href="/"
+          href="/frontend/public"
           className="inline-block bg-secondary p-2 rounded-md md:hidden"
         >
           <ChevronLeftIcon />
